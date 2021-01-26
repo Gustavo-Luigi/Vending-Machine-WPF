@@ -26,7 +26,7 @@ namespace VendingMachine.ViewModels
             }
             set
             {
-                _total = Total;
+                _total = value;
                 OnPropertyChanged("Total");
             }
         }
@@ -39,7 +39,7 @@ namespace VendingMachine.ViewModels
             }
             set
             {
-                _inserted = Inserted;
+                _inserted = value;
                 OnPropertyChanged("Inserted");
             }
         }
@@ -52,7 +52,7 @@ namespace VendingMachine.ViewModels
             }
             set
             {
-                _change = Change;
+                _change = value;
                 OnPropertyChanged("Change");
             }
         }
@@ -65,7 +65,7 @@ namespace VendingMachine.ViewModels
             }
             set
             {
-                _bankTotal = BankTotal;
+                _bankTotal = value;
                 OnPropertyChanged("BankTotal");
             }
         }
@@ -104,7 +104,7 @@ namespace VendingMachine.ViewModels
         /// <returns></returns>
         public bool Confirm()
         {
-            if (Inserted > Total)
+            if (Inserted >= Total)
                 return true;
 
             return false;
