@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace VendingMachine.Models
 {
-    class VendingBank
+    public class VendingBank
     {
+        public double Payments { get; set; }
+        public double Pending { get; set; }
+
     }
 }
